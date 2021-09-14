@@ -1,8 +1,222 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title> Воронцов Леонид Юрьевич, M33011 </title>
+	<link rel="stylesheet" href="CSS/outlines.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="C++, development, student, ITMO">
+	<meta name="description" content="Персональная страница-портфолио ">
+	<meta name="author" content="Леонид Воронцов">
 </head>
 <body>
-Воронцов Леонид Юрьевич, группа M33011
+	<header>
+		<h1>Воронцов Леонид Юрьевич</h1>
+		<h2>Студент Университета ИТМО, embeded-разработчик</h2>
+		<blockquote>
+		<p>В основе своей плюсы и embeded-разработка есть ни что иное как совместимости<sup>3</sup> + страдание<sup>2</sup>. Но кто-то же должен страдать и эту самую совместимость поддержимвать?</p>
+		</blockquote>
+		<cite>Леонид Воронцов</cite>
+		<nav>
+		<a href="#summary">Общая информация</a> <a href="#additional">Дополнительная информация информация</a> <a href="#contacts">Контакты</a>
+		</nav>
+	</header>
+	
+	<main>
+	
+	<section>
+	<a name="summary"><h1>Общая информация</h1></a>
+		<article>
+		<h2>Биография</h2>
+			<p>
+			<s>Я родился в Москве в 70-м на краю города...</s> Родился и вырос в Санкт-Петербурге, с раннего детства интересовался компьютерами. Поступил в обычную районную школу №10 с углубленным изучением химии.
+			Начал программировать где-то в 7 классе. Первым языком был QBASIC, затем по-школьному Pascal, однако ЕГЭ сдавал уже на C++. <br>
+			В <time datetime="2019-08">2019 году</time> поступил в Университет ИТМО на <strong>"Программировании и интернет-технологиях"</strong>,
+			где учусь и по сей день. В данный момент учусь уже на 3-м курсе в группе <strong>M33011</strong>.
+			</p>
+		
+		</article>
+		
+		<article>
+		<h2>Карьера</h2>
+			<p>
+			В даный момент нахожусь в поисках своего призвания и работаю embeded-разработчиком в небольшой компании <strong>"Каури IoT"</strong>
+			и разрабатываю ПО для микроконтроллеров для работы в сетях <strong>ZigBee</strong>. Это моя первая и пока что единственная работа.
+			</p>
+		</article>
+		
+		<article>
+		<h2>Языки</h2>
+				<dl>
+					<dt><strong>Русский</strong></dt>
+						<dd>Родной язык, наиболее предпочтителен для общения</dd>
+					<dt><strong>Английский</strong></dt>
+						<dd>B2/C1 - свободно общаюсь и читаю разного рода документацию</dd>
+				</dl>
+		</article>
+		<article>
+		<h2>Языки программирования</h2>
+		<dl>
+					<dt><strong>C</strong></dt>
+						<dd>Н нем пишу ПО для микроконтроллеров, наиболее изучен</dd>
+					<dt><strong>C++</strong></dt>
+						<dd>На нем последнее время поддерживаю код пары небольших HTTP-серверов, сделанных на основе библиотеки Poco</dd>
+					<dt><strong>Assembly</strong></dt>
+						<dd>Изучал для разминки мозга, хотя иногда в ходе отладки приходилось просматривать глубины того, что точно делает программа</dd>
+					<dt><strong>Python</strong></dt>
+						<dd>По необходимости в ходе учёбы использовал для относительно коротких скриптов для лабораторных работ</dd>
+					<dt><strong>C#</strong></dt>
+						<dd>Пытаюсь изучить чисто для души, но что-то все время мешает</dd>
+		</dl>
+						<aside>
+						<p>Конечно же, этот список далеко не исчерпывающий, ибо приходилось и на bash с powershell писать и других языков касаться. Да и древность с экзотикой вроде QBASIC, Pascal и COBOL никто не отменял</p>
+						</aside>
+		</article>
+	
+	</section>
+	<section>
+	<a name="additional"><h1>Дополнительная информация</h1></a>
+	<article>
+		<h2>Пример кода</h2>
+		<p>А здесь будет ассемблерная функция, которая ищет в двумерном массиве самую длинную вертикальную линию из нулей, что я написал в качестве тестового в JetBrains. Пусть хоть где-то пригодится</p>
+			<pre><code>
+.global lineFinder
+	lineFinder: 
+		push %rcx
+		push %rdx
+		push %r8
+		xor %rcx, %rcx
+		xor %rdx, %rdx
+		xor %r9, %r9
+		xor %r10, %r10
+		
+		width_loop:
+			xor %rcx, %rcx
+			height_loop:
+				mov 8(%rsp), %rax
+				mov 16(%rsp), %rbx
+				call get_element
+				cmp $0, %rax
+				jne continue
+				mov 8(%rsp), %rax
+				mov (%rsp), %rbx
+				mov 16(%rsp), %r8
+				call follow_line
+				cmp %r10, %rax
+				jl continue
+				mov %rax, %r10
+			continue:
+				inc %rcx
+				cmp 8(%rsp), %rcx
+				jl height_loop
+				
+			inc %rdx
+			cmp  (%rsp), %rdx
+			jl width_loop
+		
+		mov %r10, %rax
+		add $24, %rsp
+		ret
+	
+	
+	// rcx, rdx - iterators for position
+	// rax - width
+	// rbx - address
+	// rax - result
+	get_element:
+		push %rdx
+		mul %rdx
+		pop %rdx
+		add %rcx, %rax
+		add %rax, %rbx
+		xor %rax, %rax
+		movb (%rbx), %al
+		ret
+		
+		
+	// rcx, rdx - start position
+	// rax - width
+	// rbx - height
+	// r8 - address
+	// rax - result	
+	follow_line:
+		push %rdx
+		push %rax
+		push %rbx
+		push %r8
+		mov $0, %r9
+		cmp 8(%rsp), %rdx
+		jge finish
+		
+		downloop:
+			mov (%rsp), %rbx
+			mov 16(%rsp), %rax
+			call get_element
+			cmp $0, %rax
+			jne finish
+			inc %r9
+	
+			inc %rdx
+			cmp 8(%rsp), %rdx
+		jl downloop
+	
+		finish:
+		add $24, %rsp
+		pop %rdx
+		mov %r9, %rax
+		ret
+			</code></pre>
+		
+		</article>
+		<article>
+		<h2>Увлечения</h2>
+			<p>Что касается увлечений, то меня всегда тянуло на вымершие технологии: то плёночной фотографией займусь, то неделю читаю про аналоговое теливиденье, то недавно купил пишущую машинку.
+			Уже где-то год собираю виниловые пластинки. Хотя, в основном, это только приступы интереса к чему-то отличному от лежания на диване и залипанию в мемы</p>
+		
+		</article>
+		<article>
+		<h2>Динозавр</h2>
+		<p>Если действительно кто-то это прочитает, то за ваш труд вот вам стегозавр. Если не читали, а просто пролистали, то этот стегозавр не для вас, листайте дальше.</p>
+		<pre>
+		                         .       .
+                        / `.   .' \
+                .---.  <    > <    >  .---.
+                |    \  \ - ~ ~ - /  /    |
+                 ~-..-~             ~-..-~
+             \~~~\.'                    `./~~~/
+   .-~~^-.    \__/                        \__/
+ .'  O    \     /               /       \  \
+(_____,    `._.'               |         }  \/~~~/
+ `----.          /       }     |        /    \__/
+       `-.      |       /      |       /      `. ,~~|
+           ~-.__|      /_ - ~ ^|      /- _      `..-'   f: f:
+                |     /        |     /     ~-.     `-. _||_||_
+                |_____|        |_____|         ~ - . _ _ _ _ _>
+		</pre>
+		
+		
+		</article>
+	
+	</section>
+	<section>
+	<a name="contacts"><h1>Контакты</h1></a>
+		<article>
+			<ul>
+			<li>Github:
+				<a href=https://github.com/leuri397 >leuri397</a></li>
+			<li>e-mail: 
+				<a href = "mailto: leouri2001@gmail.com">leouri2001@gmail.com</a></li>
+			<li>Телефон:
+				<a href="tel: +78123513219">8-(812)-351-32-19<a>
+				(но звонить туда не надо)
+			</li>
+			<aside>Также меня можно иногда найти на BBS DiamondMine под ником Leuri397</aside>
+			</ul>
+		</article>
+	
+	</section>
+	</main>
+	
+	<footer>
+		&#xa9; <time datetime="2021">2021</time> год, университет ИТМО, Санкт-Петербург
+	</footer>
 </body>
