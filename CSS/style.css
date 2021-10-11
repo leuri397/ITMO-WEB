@@ -82,6 +82,7 @@ article {
 
 .sidenote-left p {
     text-indent: 0;
+    padding-left: 5%;
 }
 
 .sidenote-right {
@@ -94,6 +95,11 @@ article {
     color:#2de2e6;
     text-shadow: 0 0 5px #035ee8;
     font-size: 70%;
+}
+
+.sidenote-right p {
+    text-indent: 0;
+    padding-left: 5%;
 }
 
 .navigation-panel {
