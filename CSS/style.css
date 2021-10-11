@@ -19,9 +19,12 @@ body {
     font-family: "Montserrat";
     background-color: #000000;
     color: #d40078;
-    text-shadow: 0 0 5px #800051;
+    text-shadow: 0 0 5px #a50068;
 }
 
+footer {
+    text-shadow: 0 0 5px #000000;
+}
 
 p { 
     text-indent: 30px; 
@@ -63,21 +66,29 @@ article {
 }
 
 .sidenote-left {
-    width: 10%;
+    background-color: #1a0015;
+    box-shadow: 0px 0px 50px #035ee8;
     padding: 1%;
     position: absolute;
-    transform:translate(-120%, -95%);
-    background-color: #a4e4eb;
-    box-shadow: 0px 0px 20px #005C66;
+    width: 10%;
+    transform:translate(-120%, -105%);
+    color:#2de2e6;
+    text-shadow: 0 0 5px #035ee8;
+}
+
+.sidenote-left p {
+    text-indent: 0;
 }
 
 .sidenote-right {
-    width: 10%;
+    background-color: #1a0015;
+    box-shadow: 0px 0px 50px #035ee8;
     padding: 1%;
     position: absolute;
-    transform:translate(560%, -95%);
-    background-color: #a4e4eb;
-    box-shadow: 0px 0px 50px #005C66;
+    width: 10%;
+    transform:translate(560%, -105%);
+    color:#2de2e6;
+    text-shadow: 0 0 5px #035ee8;
 }
 
 .navigation-panel {
@@ -89,7 +100,7 @@ article {
 .navigation-panel a {
     /*border: 1px solid #03a4b6;*/
     background-color: #000a1a;
-    box-shadow: 0px 0px 50px #035ee8;
+    box-shadow: 0px 0px 20px #035ee8;
     padding: 1% 1% 1% 1%;
     margin-left: 1%;
     margin-right: 1%;
@@ -98,6 +109,7 @@ article {
 header section img {
    float: left;
    margin: 3%;
+   box-shadow: 0px 0px 50px #035ee8;
 }
 
 .rasporka {
@@ -106,9 +118,26 @@ header section img {
 
 a:link {
     color: #035ee8;
-    text-shadow: 0 0 10px #035ee8;
+    text-shadow: 0 0 5px #a50068;
   }
 
 a:visited {
-    color: #f6019d;
-  }
+    color: #ff00a2;
+}
+
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffbf00;
+    text-shadow: 0 0 5px #ffbf00;
+    border: 2px solid gray; 
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    background-color: #000000;
+}
+
+code {
+
+    color: #00FF00;
+    text-shadow: 0 0 10px #00ff00;
+}
