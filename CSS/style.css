@@ -1,28 +1,15 @@
-@font-face {
-    font-weight: 400;
-    font-family: "Montserrat";
-    font-style: normal;
-    src: url("../fonts/Montserrat-Regular.woff") format("woff");
-}
-  
-  @font-face {
-    font-weight: 700;
-    font-family: "Montserrat";
-    font-style: normal;
-    src: url("../fonts/Montserrat-Bold.woff") format("woff");
-}
 
 body {
     width: 65%;
     margin-left: auto;
     margin-right: auto;
-    font-family: "Montserrat";
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #000000;
     color: #d40078;
     text-shadow: 0 0 5px #a50068;
     background: url("../images/retrowave-background.jpg") no-repeat;
     background-size: 100% 100%;
-    font-size: 80%;
+    font-size: 1vw;
 }
 
 footer {
@@ -90,8 +77,9 @@ article {
     box-shadow: 0px 0px 50px #035ee8;
     padding: 1px;
     position: absolute;
-    width: 10%;
-    transform:translate(650%, -105%);
+    width: 13%;
+    left: 82%;
+    transform: translate(30px, -100%);
     color:#2de2e6;
     text-shadow: 0 0 5px #035ee8;
     font-size: 70%;
@@ -118,6 +106,7 @@ article {
 }
 
 header section img {
+    width: 20%;
    float: left;
    margin: 3%;
    box-shadow: 0px 0px 50px #035ee8;
