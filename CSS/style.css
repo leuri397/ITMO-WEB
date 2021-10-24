@@ -213,3 +213,8 @@ footer p {
     text-shadow: 0 0 5px #035ee8;
     padding: 1% 1% 1% 1%;
 }
+
+footer p a:visited {
+    color: #035ee8;
+    text-shadow: 0 0 5px #a50068;
+}
