@@ -7,6 +7,31 @@
         display: flex;
         flex-wrap: nowrap;
     }
+    .sidenote-left {
+        background-color: #1a0015;
+        box-shadow: 0px 0px 50px #035ee8;
+        padding: 1px;
+        position: absolute;
+        width: 13%;
+        left: 5%;
+        transform:translate(-30px, -100%);
+        color:#2de2e6;
+        text-shadow: 0 0 5px #035ee8;
+        font-size: 70%;
+    }
+
+    .sidenote-right {
+        background-color: #1a0015;
+        box-shadow: 0px 0px 50px #035ee8;
+        padding: 1px;
+        position: absolute;
+        width: 13%;
+        left: 82%;
+        transform: translate(30px, -100%);
+        color:#2de2e6;
+        text-shadow: 0 0 5px #035ee8;
+        font-size: 70%;
+    }
 }
 
 @media (orientation: portrait) {
@@ -16,6 +41,18 @@
     header section {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .sidenote-left {
+        color:#2de2e6;
+        text-shadow: 0 0 5px #035ee8;
+        display: inline;
+    }
+
+    .sidenote-right {
+        color:#2de2e6;
+        text-shadow: 0 0 5px #035ee8;
+        block-size: fit-content;
     }
 }
 
@@ -95,36 +132,14 @@ article {
 }
 
 
-.sidenote-left {
-    background-color: #1a0015;
-    box-shadow: 0px 0px 50px #035ee8;
-    padding: 1px;
-    position: absolute;
-    width: 13%;
-    left: 5%;
-    transform:translate(-30px, -100%);
-    color:#2de2e6;
-    text-shadow: 0 0 5px #035ee8;
-    font-size: 70%;
-}
+
 
 .sidenote-left p {
     text-indent: 0;
     padding-left: 5%;
 }
 
-.sidenote-right {
-    background-color: #1a0015;
-    box-shadow: 0px 0px 50px #035ee8;
-    padding: 1px;
-    position: absolute;
-    width: 13%;
-    left: 82%;
-    transform: translate(30px, -100%);
-    color:#2de2e6;
-    text-shadow: 0 0 5px #035ee8;
-    font-size: 70%;
-}
+
 
 .sidenote-right p {
     text-indent: 0;
