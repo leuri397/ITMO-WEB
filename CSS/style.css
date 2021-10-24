@@ -65,7 +65,6 @@ body {
     text-shadow: 0 0 5px #a50068;
     background: url("../images/retrowave-background.jpg") no-repeat;
     background-size: 100% 100%;
-    /*font-size: 1vw;*/
 }
 
 main section {
@@ -95,12 +94,11 @@ h2 {
     text-indent: 30px; 
 }
 
-
-
 .header-content {
     display: flex;
     flex-direction: column;
 }
+
 
 .header-headers {
     flex-shrink: 2;
@@ -130,9 +128,6 @@ section {
 article {
     padding: 1%;
 }
-
-
-
 
 .sidenote-left p {
     text-indent: 0;
@@ -204,4 +199,17 @@ code {
 
     color: #00FF00;
     text-shadow: 0 0 10px #00ff00;
+}
+
+footer p {
+    position: fixed;
+    text-indent: 0px;
+    bottom: 1%;
+    left: 5%;
+    background-color: #1a0015;
+    box-shadow: 0px 0px 50px #035ee8;
+    padding: 1px;
+    color:#2de2e6;
+    text-shadow: 0 0 5px #035ee8;
+    padding: 1% 1% 1% 1%;
 }
