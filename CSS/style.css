@@ -32,6 +32,13 @@
         text-shadow: 0 0 5px #035ee8;
         font-size: 70%;
     }
+
+    .navigation-panel nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
 }
 
 @media (orientation: portrait) {
@@ -54,6 +61,11 @@
         text-shadow: 0 0 5px #035ee8;
         block-size: fit-content;
     }
+    .navigation-panel nav {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 80%;
+    }
 }
 
 body {
@@ -65,6 +77,7 @@ body {
     text-shadow: 0 0 5px #a50068;
     background: url("../images/retrowave-background.jpg") no-repeat;
     background-size: 100% 100%;
+    font-size: 90%;
 }
 
 main section {
@@ -98,7 +111,6 @@ h2 {
     display: flex;
     flex-direction: column;
 }
-
 
 .header-headers {
     flex-shrink: 2;
@@ -134,8 +146,6 @@ article {
     padding-left: 5%;
 }
 
-
-
 .sidenote-right p {
     text-indent: 0;
     padding-left: 5%;
@@ -147,23 +157,25 @@ article {
     margin-top: 2%;
 }
 
-.navigation-panel nav {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
-
 .navigation-panel a {
     background-color: #000a1a;
     box-shadow: 0px 0px 20px #035ee8;
     padding: 1% 1% 1% 1%;
-    margin-left: 1%;
-    margin-right: 1%;
-    font-size: 110%;
+    margin: 1% 1% 1% 1%;
+}
+
+.outside-link {
+    background-color: #000a1a;
+    box-shadow: 0px 0px 20px #00ff00;
+    margin: 1% 1% 1% 1%;
+    padding: 1% 1% 1% 1%;
+}
+
+.outside-link a {
+    box-shadow: none;
 }
 
 header section img {
-    
    float: left;
    margin: 3%;
    box-shadow: 0px 0px 50px #035ee8;
