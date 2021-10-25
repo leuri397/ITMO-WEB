@@ -64,7 +64,6 @@
     .navigation-panel nav {
         display: flex;
         flex-wrap: wrap;
-        font-size: 80%;
     }
 }
 
