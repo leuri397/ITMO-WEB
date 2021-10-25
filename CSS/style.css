@@ -163,15 +163,35 @@ article {
     margin: 1% 1% 1% 1%;
 }
 
-.outside-link {
+.current-page {
     background-color: #000a1a;
     box-shadow: 0px 0px 20px #00ff00;
     margin: 1% 1% 1% 1%;
     padding: 1% 1% 1% 1%;
 }
 
-.outside-link a {
+.current-page a {
     box-shadow: none;
+}
+
+.current-page .related-sections {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+.related-sections {
+    background-color: #000a1a;
+    box-shadow: 0px 0px 20px #035ee8;
+    margin: 1% 1% 1% 1%;
+    padding: 1% 1% 1% 1%;
+}
+
+.related-sections a {
+    box-shadow: none;
+    margin: 0;
+    padding: 1% 1% 1% 1%;
+    display: inline-block;
 }
 
 header section img {
