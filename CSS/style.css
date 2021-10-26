@@ -75,6 +75,7 @@ body {
     color: #d40078;
     text-shadow: 0 0 5px #a50068;
     background: url("../images/retrowave-background.jpg") no-repeat;
+    background-attachment: fixed;
     background-size: 100% 100%;
     font-size: 90%;
 }
@@ -84,6 +85,7 @@ main section {
     justify-content: space-between;
     flex-wrap: nowrap;
     flex-direction: column;
+    padding: 1% 1% 1% 1%;
 }
 
 footer {
@@ -157,6 +159,7 @@ article {
 }
 
 .navigation-panel a {
+    flex-grow: 2;
     background-color: #000a1a;
     box-shadow: 0px 0px 20px #035ee8;
     padding: 1% 1% 1% 1%;
@@ -164,6 +167,7 @@ article {
 }
 
 .current-page {
+    flex-grow: 2;
     background-color: #000a1a;
     box-shadow: 0px 0px 20px #00ff00;
     margin: 1% 1% 1% 1%;
@@ -172,6 +176,7 @@ article {
 
 .current-page a {
     box-shadow: none;
+    display: inline-block;
 }
 
 .current-page .related-sections {
@@ -250,4 +255,22 @@ footer p {
 footer p a:visited {
     color: #035ee8;
     text-shadow: 0 0 5px #a50068;
+}
+
+table {
+    border: 2px solid #ff00a2;
+    margin: 4% 4% 4% 4%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #ff00a2;
+}
+
+tr:nth-child(even) {
+    background: #000a1ad3;
+ }
+tr:nth-child(odd) {
+    background: #000a1a2d;
+    color: #2de2e6;
 }
