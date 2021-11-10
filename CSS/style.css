@@ -239,7 +239,7 @@ code {
     text-shadow: 0 0 10px #00ff00;
 }
 
-footer p {
+footer .upButton {
     position: fixed;
     text-indent: 0px;
     bottom: 1%;
@@ -250,6 +250,9 @@ footer p {
     color:#2de2e6;
     text-shadow: 0 0 5px #035ee8;
     padding: 1% 1% 1% 1%;
+}
+footer div {
+    display: inline-block;
 }
 
 footer p a:visited {
