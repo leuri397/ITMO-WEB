@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title> Воронцов Леонид Юрьевич, M33011 </title>
+	<script src="js/download_speed.js"></script>
+	<link rel="stylesheet" href="CSS/style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="keywords" content="C++, development, student, ITMO">
+	<meta name="description" content="Персональная страница-портфолио ">
+	<meta name="author" content="Леонид Воронцов">
+</head>
+<body>
+    <a name="top"></a>
+	<header>
+		<section>
+			<img src="images/profile.jpeg" alt="Leonid Vorontsov profile picture">
+			<div class=header-content>
+				<div class=header-headers>
+					<h1>Воронцов Леонид Юрьевич</h1>
+					<h2>Студент Университета ИТМО, embeded-разработчик</h2>
+				</div>
+				<div class=header-text>
+					<blockquote>
+					<p>В основе своей плюсы и embeded-разработка есть ни что иное как совместимости<sup>3</sup> + страдание<sup>2</sup>. Но кто-то же должен страдать и эту самую совместимость поддержимвать?</p>
+					</blockquote>
+					<cite>Леонид Воронцов</cite>
+				</div>
+			</div>
+		</section>
+		<div class="navigation-panel">
+			<nav>
+				<a href="index.html">Главная</a>
+				<a href="additional_content.html">Дополнительный контент</a>
+				<a href="schedule.html">Генератор расписания</a>
+			</nav>
+		</div>
+	</header>
+    <main>
+        <section>
+            <div id="interactive-schedule">
+                <h1>Расписание занятий</h1>
+                <input type="radio" name="week" id="5-day" checked>
+                <label for="5-day">5 дней</label>
+                <input type="radio" name="week" id="6-day">
+                <label for="6-day">6 дней</label>
+                <div class="lesson-control-form">
+                </div>
+            </div>
+        </section>
+    </main>
+	<footer>
+		<p>&#xa9; <time datetime="2021">2021</time> год, университет ИТМО, Санкт-Петербург</p>
+		<p>Page load time is <span id=LoadTime>0000</span> ms </p>
+		<div class="upButton"> <a href="#top">Наверх </a></div>
+	</footer>
+	<script src="js/menu_elements.js"></script>
+    <script src="js/scheduler.js"></script>
+</body>

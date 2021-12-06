@@ -182,12 +182,6 @@ article {
 }
 
 
-/*.current-page a {
-    box-shadow: none;
-    display: inline-block;
-}*/
-
-
 header section img {
    float: left;
    margin: 3%;
@@ -249,12 +243,14 @@ footer p a:visited {
 
 table {
     border: 2px solid #ff00a2;
-    margin: 4% 4% 4% 4%;
+    margin-left: 4%;
+    margin-right: 4%;
     border-collapse: collapse;
 }
 
 td, th {
     border: 1px solid #ff00a2;
+    height: 20px;
 }
 
 tr:nth-child(even) {
@@ -263,4 +259,54 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background: #000a1a2d;
     color: #2de2e6;
+}
+
+button {
+    font-size: 150%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border: 1px solid #ff00a2;
+    box-shadow: 0px 0px 50px #f6019d;
+    display: inline-block;
+    background-color: black;
+    color: #d40078;
+    text-shadow: 0 0 5px #a50068;
+}
+
+.remove {
+    font-size: 150%;
+    width: 5%;
+}
+
+.Время {
+    width: 20%;
+}
+
+input {
+    display: inline-block;
+    background-color: transparent;
+    color: inherit;
+}
+td {
+    padding: 0 0 0 0;
+}
+td input {
+    width: 90%;
+    border: none;
+    font-size: 100%;
+    padding: 0 0 0 0;
+}
+
+.Преподаватель {
+    width: 45%;
+}
+.Аудитория {
+    width: 13%;
+}
+.Предмет {
+    width: 24%;
+}
+
+.schedule-table {
+    width: 90%;
 }
