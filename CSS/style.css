@@ -275,7 +275,7 @@ button {
 
 .remove {
     font-size: 150%;
-    width: 5%;
+    width: 10%;
 }
 
 .Время {
@@ -298,7 +298,7 @@ td input {
 }
 
 .Преподаватель {
-    width: 45%;
+    width: 40%;
 }
 .Аудитория {
     width: 13%;

@@ -1,3 +1,15 @@
+function checkDays(isWeek6Days) {
+    if (!is6days)
+    {
+        document.getElementById("Суббота").style.display = "none";
+        document.getElementById("Суббота-button").style.display = "none";
+    }
+    else 
+    {
+        document.getElementById("Суббота").style.display = "";
+        document.getElementById("Суббота-button").style.display = "";
+    }
+}
 
 class Lesson {
 
@@ -161,29 +173,11 @@ let button5 = document.getElementById("5-day");
 let button6 = document.getElementById("6-day");
 button6.addEventListener("click", function(event) {
     is6days = event.target.checked;
-    if (!is6days)
-    {
-        document.getElementById("Суббота").style.display = "none";
-        document.getElementById("Суббота-button").style.display = "none";
-    }
-    else 
-    {
-        document.getElementById("Суббота").style.display = "";
-        document.getElementById("Суббота-button").style.display = "";
-    }
+    checkDays(is6days);
 }, false);
 button5.addEventListener("click", function(event) {
     is6days = !event.target.checked;
-    if (!is6days)
-    {
-        document.getElementById("Суббота").style.display = "none";
-        document.getElementById("Суббота-button").style.display = "none";
-    }
-    else 
-    {
-        document.getElementById("Суббота").style.display = "";
-        document.getElementById("Суббота-button").style.display = "";
-    }
+    checkDays(is6days);
 }, false);
 
 let is6days = WeekStorage.getItem("6-day_week");
