@@ -10,7 +10,7 @@
 	<meta name="author" content="Леонид Воронцов">
 </head>
 <body>
-    <a name="top"></a>
+	<a name="top"></a>
 	<header>
 		<section>
 			<img src="images/profile.jpeg" alt="Leonid Vorontsov profile picture">
@@ -36,24 +36,21 @@
 			</nav>
 		</div>
 	</header>
+	
     <main>
         <section>
-            <div id="interactive-schedule">
-                <h1>Расписание занятий</h1>
-                <input type="radio" name="week" id="5-day" checked>
-                <label for="5-day">5 дней</label>
-                <input type="radio" name="week" id="6-day">
-                <label for="6-day">6 дней</label>
-                <div class="lesson-control-form">
-                </div>
+            <h2>Комментарии к чему-то</h2>
+            <div class="loaded-content">
+                <img src="images/loading-frog.gif" id='loader-background'>
+                <div class="loading-writing" id='loader-text'>Загрузка...</div>
             </div>
         </section>
     </main>
-	<footer>
-		<p>&#xa9; <time datetime="2021">2021</time> год, университет ИТМО, Санкт-Петербург</p>
-		<p>Page load time is <span id=LoadTime>0000</span> ms </p>
-		<div class="upButton"> <a href="#top">Наверх </a></div>
-	</footer>
-	<script src="js/menu_elements.js"></script>
-    <script src="js/scheduler.js"></script>
+<footer>
+    <p>&#xa9; <time datetime="2021">2021</time> год, университет ИТМО, Санкт-Петербург</p>
+    <p>Page load time is <span id=LoadTime>0000</span> ms </p>
+    <div class="upButton"> <a href="#top">Наверх </a></div>
+</footer>
+<script src="js/menu_elements.js"></script>
+<script src="js/fetch_data.js"></script>
 </body>
